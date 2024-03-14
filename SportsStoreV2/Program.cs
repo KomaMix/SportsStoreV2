@@ -1,4 +1,8 @@
+using SportsStoreV2.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddTransient<IProductRepository, FakeProductRepository>();
 
 
 var app = builder.Build();
