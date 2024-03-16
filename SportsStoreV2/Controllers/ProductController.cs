@@ -10,5 +10,6 @@ namespace SportsStoreV2.Controllers
 		{
 			this.repository = repository;
 		}
+		public ViewResult List() => View(repository.Products);
 	}
 }
