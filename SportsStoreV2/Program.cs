@@ -15,7 +15,10 @@ options.UseSqlServer(connectionString));
 var app = builder.Build();
 
 
-
+app.MapControllerRoute(
+		name: "pagination",
+		pattern: "Products/Page{productPage}",
+		defaults: new { Controller = "Product", Action = "List" });
 app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=Product}/{action=List}/{id?}");
